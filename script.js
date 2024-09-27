@@ -54,6 +54,8 @@ let weatherApp = (function() {
     }
 
     let drawWeek = () => {
+        let weekdiv = document.querySelector('.weekdiv');
+        weekdiv.textContent = "";
         weatherWeek.forEach(day => {
             // for each day, create an appropriate daydiv
             let daydiv = document.createElement('div');
@@ -74,13 +76,12 @@ let weatherApp = (function() {
             daydiv.appendChild(highdiv);
             
             // slot the day objects data into the daydiv
-            icondiv.textContent = 'ICON';
-            datediv.textContent = 'DATE';
-            lowdiv.textContent = 'Low: ';
-            highdiv.textContent = 'High: ';
+            icondiv.textContent = day.icon;
+            datediv.textContent = day.datetime;
+            lowdiv.textContent = `Low: ${day.tempmin}`;
+            highdiv.textContent = `High: ${day.tempmax}`;
 
             // append the daydiv inside of the weekdiv onscreen.
-            let weekdiv = document.querySelector('.weekdiv');
             weekdiv.appendChild(daydiv);
         });
     }
