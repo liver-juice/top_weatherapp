@@ -47,8 +47,11 @@ let weatherApp = (function() {
         citydiv.textContent = city;
         cityindicator.textContent = city;
         datediv.textContent = today.datetime;
-        imgdiv.textContent = today.icon;
-        tempdiv.textContent = today.temp;
+        let icon = document.createElement('img');
+        icon.src = `./icons/${today.icon}.png`;
+        imgdiv.textContent = '';
+        imgdiv.appendChild(icon);
+        tempdiv.textContent = `${today.temp}°F`;
         statediv.textContent = today.description;
 
     }
@@ -76,10 +79,15 @@ let weatherApp = (function() {
             daydiv.appendChild(highdiv);
             
             // slot the day objects data into the daydiv
-            icondiv.textContent = day.icon;
+            let icon = document.createElement('img');
+            icon.src = `./icons/${day.icon}.png`;
+            icondiv.textContent = '';
+            icondiv.appendChild(icon);
+
+
             datediv.textContent = day.datetime;
-            lowdiv.textContent = `Low: ${day.tempmin}`;
-            highdiv.textContent = `High: ${day.tempmax}`;
+            lowdiv.textContent = `Low: ${day.tempmin}°F`;
+            highdiv.textContent = `High: ${day.tempmax}°F`;
 
             // append the daydiv inside of the weekdiv onscreen.
             weekdiv.appendChild(daydiv);
