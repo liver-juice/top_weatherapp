@@ -1,5 +1,5 @@
 let weatherApp = (function() {
-    let city = 'beaumont tx';
+    let city = 'china tx';
     let apiKey = 'DLNE4QADMLDWQ9VRNE3ZP6U4R';
     let weatherWeek;
 
