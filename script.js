@@ -48,7 +48,7 @@ let weatherApp = (function() {
         cityindicator.textContent = city;
         datediv.textContent = today.datetime;
         let icon = document.createElement('img');
-        icon.src = `./icons/${today.icon}.png`;
+        icon.src = `icons/${today.icon}.png`;
         imgdiv.textContent = '';
         imgdiv.appendChild(icon);
         tempdiv.textContent = `${today.temp}°F`;
@@ -80,7 +80,7 @@ let weatherApp = (function() {
             
             // slot the day objects data into the daydiv
             let icon = document.createElement('img');
-            icon.src = `./icons/${day.icon}.png`;
+            icon.src = `icons/${day.icon}.png`;
             icondiv.textContent = '';
             icondiv.appendChild(icon);
 
