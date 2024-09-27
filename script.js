@@ -1,5 +1,5 @@
 let weatherApp = (function() {
-    let city = 'china tx';
+    let city = 'birmingham';
     let apiKey = 'DLNE4QADMLDWQ9VRNE3ZP6U4R';
     let weatherWeek;
 
